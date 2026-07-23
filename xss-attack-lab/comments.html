@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>XSS Lab - Comment Section</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 600px; margin: 40px auto; padding: 0 20px; }
+    h1 { color: #b00020; }
+    .comment { background: #f5f5f5; padding: 10px; margin: 8px 0; border-radius: 4px; }
+    input, textarea { width: 100%; padding: 8px; margin: 6px 0; box-sizing: border-box; }
+    button { padding: 8px 16px; background: #b00020; color: white; border: none; border-radius: 4px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>⚠️ XSS Lab — Vulnerable Comment Section</h1>
+  <p>This form does NOT sanitize input. For educational use only.</p>
+
+  <form action="/comment" method="POST">
+    <input type="text" name="name" placeholder="Your name" required>
+    <textarea name="message" placeholder="Your comment" required></textarea>
+    <button type="submit">Post Comment</button>
+  </form>
+
+  <h2>Comments</h2>
+  <!-- COMMENTS_GO_HERE -->
+</body>
+</html>
